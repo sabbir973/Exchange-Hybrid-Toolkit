@@ -8,16 +8,18 @@ A production-ready PowerShell automation suite designed for Enterprise system ad
 
 The toolkit is organized into specialized modules to make navigation and deployment straightforward:
 
-*   **`DNS/`** — Network triage and infrastructure resolution utilities.
-    *   `Resolve-BulkDnsLookups.ps1` — Fast, native PowerShell `Resolve-DnsName` utility to parse domain lists.
-    *   `Resolve-BatchDnsDetails.ps1` — Comprehensive legacy `nslookup` parser that tracks targeting servers with built-in request delays.
-*   **`DistributionLists/`** — On-premises and cloud distribution group auditing.
-*   **`MailboxOptimization/`** — Automated mailbox maintenance and storage quota governance.
-    *   `Optimize-MailboxArchiveExpansion.ps1` — Automates Auto-Expanding Archive provisioning and triggers `FullCrawl` folder optimization scripts for mailboxes exceeding 90GB.
-*   **`RoomMailbox/`** — Resource and calendar booking policy configurations.
-    *   `Add-RoomMailboxUsers.ps1` — Reusable function to restrict room mailbox parameters and safely append authorized booking users.
-*   **`SharedMailbox/`** — Access management across hybrid mail architectures.
-    *   `Compare-HybridGroupMembers.ps1` — Cross-checks group memberships dynamically between on-premises Active Directory and Exchange Online.
+- **DNS/** — Network triage and infrastructure resolution utilities.
+  - `Resolve-BulkDnsLookups.ps1` — Fast, native PowerShell Resolve-DnsName utility to parse domain lists.
+  - `Resolve-BatchDnsDetails.ps1` — Comprehensive legacy nslookup parser that tracks targeting servers with built-in request delays.
+- **DistributionLists/** — On-premises and cloud distribution group auditing.
+- **LegalHold/** — Corporate compliance and mailbox preservation management.
+  - `Manage-LegalHoldMailboxCleanup.ps1` — Toggles single-item recovery and delay hold states to run safe, iterative dumpster purging on targeted accounts.
+- **MailboxOptimization/** — Automated mailbox maintenance and storage quota governance.
+  - `Optimize-MailboxArchiveExpansion.ps1` — Automates Auto-Expanding Archive provisioning and triggers FullCrawl folder optimization scripts for mailboxes exceeding 90GB.
+- **RoomMailbox/** — Resource and calendar booking policy configurations.
+  - `Add-RoomMailboxUsers.ps1` — Reusable function to restrict room mailbox parameters and safely append authorized booking users.
+- **SharedMailbox/** — Access management across hybrid mail architectures.
+  - `Compare-HybridGroupMembers.ps1` — Cross-checks group memberships dynamically between on-premises Active Directory and Exchange Online.
 
 ### Root Level Scripts
 *   `Get-ADUserStatus.ps1` — Active Directory query tool to quickly audit account state, email addresses, and employee details via pipeline inputs.
